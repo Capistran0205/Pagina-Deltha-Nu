@@ -1,0 +1,168 @@
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .header {
+        background-image: url('/imagenes/Logo Alpha Aventura.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; /* Asegúrate de que no se repita */
+
+        width: 350px;
+        height: 200px;
+        color: white; /* Si hay texto directamente en el header */
+        text-align: center; /* Si hay texto directamente en el header */
+
+        /* Comenta estas líneas para probar */
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* justify-content: center; */
+        /* align-items: center; */
+      }
+
+      .header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .form-container {
+        padding: 40px;
+      }
+
+      fieldset {
+        border: 2px solid #e5e7eb;
+        border-radius: 10px;
+        padding: 25px;
+        margin-bottom: 30px;
+        background: #f9fafb;
+      }
+
+      legend {
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #4f46e5;
+        padding: 0 15px;
+        background: white;
+        border-radius: 5px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+        color: #374151;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #d1d5db;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+      }
+
+      input[type="text"]:focus {
+        outline: none;
+        border-color: #4f46e5;
+        box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+      }
+
+      input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        border: 2px dashed #d1d5db;
+        border-radius: 8px;
+        background: #f9fafb;
+        cursor: pointer;
+        transition: border-color 0.3s ease;
+      }
+
+      input[type="file"]:hover {
+        border-color: #4f46e5;
+      }
+
+      .autorizado {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #e5e7eb;
+      }
+
+      .autorizado h4 {
+        color: #4f46e5;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+      }
+
+      .submit-btn {
+        width: 100%;
+        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+      }
+
+      .submit-btn:active {
+        transform: translateY(0);
+      }
+
+      .preview-container {
+        margin-top: 15px;
+        display: none;
+      }
+
+      .preview-img {
+        max-width: 100px;
+        max-height: 100px;
+        border-radius: 8px;
+        border: 2px solid #e5e7eb;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          margin: 10px;
+        }
+        
+        .header h1 {
+          font-size: 2rem;
+        }
+        
+        .form-container {
+          padding: 20px;
+        }
+      }
