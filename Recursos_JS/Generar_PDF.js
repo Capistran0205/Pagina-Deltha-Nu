@@ -146,7 +146,7 @@ async function generatePDF(formData) {
   // Insertar imagen adicional por defecto
   try {
     // CAMBIAR esta ruta por la imagen que tengas en tu proyecto
-    const imagenPorDefectoUrl = "/imagenes/Aguila Inverted.png"; // 👈 CAMBIA ESTA RUTA
+    const imagenPorDefectoUrl = "/imagenes/Aguila_Inverted.png"; // 👈 CAMBIA ESTA RUTA
     const imagenPorDefectoData = await urlToBase64(imagenPorDefectoUrl);
     
     if (imagenPorDefectoData && imagenPorDefectoData.data) {

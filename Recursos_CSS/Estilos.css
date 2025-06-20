@@ -21,7 +21,7 @@
         transform: translateY(-50%);
         width: 350px;
         height: 350px;
-        background-image: url('/imagenes/Aguila\(2\).png'); /* Ajusta la ruta según tu estructura */
+        background-image: url('/imagenes/Aguila_2.png'); /* Ajusta la ruta según tu estructura */
         background-size: contain;
         background-repeat: no-repeat;
         z-index: 0; /* Detrás del contenido pero encima del fondo */
@@ -36,7 +36,7 @@
         transform: translateY(-50%); /* Voltea horizontalmente + rotación */
         width: 350px;
         height: 350px;
-        background-image: url('/imagenes/Aguila\(2\)Inverted.png'); /* Ajusta la ruta según tu estructura */
+        background-image: url('/imagenes/Aguila_2_Inverted.png'); /* Ajusta la ruta según tu estructura */
         background-size: contain;
         background-repeat: no-repeat;
         z-index: 0;
