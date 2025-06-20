@@ -9,8 +9,40 @@
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         min-height: 100vh;
         padding: 20px;
+        position: relative; /* Necesario para el posicionamiento del dragón */
       }
 
+      /* Imagen del dragón en la izquierda */
+      body::before {
+        content: "";
+        position: fixed;
+        left: -5px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 350px;
+        height: 350px;
+        background-image: url('/imagenes/Aguila\(2\).png'); /* Ajusta la ruta según tu estructura */
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 0; /* Detrás del contenido pero encima del fondo */
+      }
+
+      /* Imagen del dragón en la derecha */
+      body::after {
+        content: "";
+        position: fixed;   
+        right: -120px; /* Espejo de la posición izquierda */     
+        top: 50%;
+        transform: translateY(-50%); /* Voltea horizontalmente + rotación */
+        width: 350px;
+        height: 350px;
+        background-image: url('/imagenes/Aguila\(2\)Inverted.png'); /* Ajusta la ruta según tu estructura */
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 0;
+      }
+
+      /* Asegurar que el contenido esté por encima del dragón */
       .container {
         max-width: 800px;
         margin: 0 auto;
@@ -18,30 +50,32 @@
         border-radius: 15px;
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         overflow: hidden;
+        position: relative;
+        z-index: 1;
       }
 
       .header {
-        background-image: url('/imagenes/Logo Alpha Aventura.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat; /* Asegúrate de que no se repita */
-
-        width: 350px;
-        height: 200px;
-        color: white; /* Si hay texto directamente en el header */
-        text-align: center; /* Si hay texto directamente en el header */
-
-        /* Comenta estas líneas para probar */
-        /* display: flex; */
-        /* flex-direction: column; */
-        /* justify-content: center; */
-        /* align-items: center; */
+        /* Mantenemos el degradado de fondo para el div.header */
+        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); 
+        padding: 20px; /* Padding interno para dar espacio al contenido */
+        
+        /* ***** PROPIEDADES CLAVE PARA CENTRAR EL CONTENIDO INTERNO ***** */
+        display: flex; /* Habilita Flexbox */
+        flex-direction: column; /* Organiza los elementos hijos (logo, h1, p) en una columna */
+        justify-content: center; /* Centra los elementos hijos verticalmente */
+        align-items: center; /* Centra los elementos hijos horizontalmente */
+        gap: 10px; /* Espacio entre los elementos (imagen, h1, p) */
       }
 
-      .header h1 {
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      /* Estilos para el logo dentro del header */
+      .header-logo {
+        max-width: 80%; /* Ajusta el tamaño máximo de la imagen para que se vea uniforme */
+                      /* Los porcentajes ajustan mejor la imagen*/
+        height: auto; /* Mantiene la proporción de la imagen al escalar */
+        object-fit: contain; /* Asegura que la imagen completa sea visible, sin recortarse */
+                            /* Si quieres que llene el espacio y se recorte si es necesario, usa 'cover' */
+        display: block; /* Asegura que la imagen sea un bloque para un mejor control del espaciado */
+        margin: 0 auto; /* Centra la imagen si el flexbox no fuera suficiente, o para navegadores antiguos */
       }
 
       .form-container {
