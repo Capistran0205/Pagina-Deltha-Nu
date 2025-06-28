@@ -4,40 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cursos de Verano</title>
-    
-    <!-- 👇 AQUÍ SE REFERENCIA EL CSS EXTERNO -->
-    <link rel="stylesheet" href="/Recursos_CSS/Estilos.css" />          
+
+    <link rel="stylesheet" href="/Recursos_CSS/Estilos.css" />
   </head>
   <body>
-    
     <div class="container">
-      <div class="header"> 
-        <img src="/imagenes/Logo_Alpha_Aventura.png" alt="Logo Alpha Aventura" class="header-logo">    
+      <div class="header">
+        <img
+          src="/imagenes/Logo_Alpha_Aventura.png"
+          alt="Logo Alpha Aventura"
+          class="header-logo"
+        />
       </div>
 
       <div class="form-container">
         <form id="formulario">
           <fieldset>
             <legend>📋 Datos del Alumno</legend>
-            
+
             <div class="form-group">
               <label for="nombre">Nombre completo:</label>
-              <input type="text" id="nombre" name="nombre" required placeholder="Ingresa el nombre completo del alumno" />
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+                placeholder="Ingresa el nombre completo del alumno"
+              />
             </div>
 
             <div class="form-group">
               <label for="categoria">Categoría:</label>
-              <input type="text" id="categoria" name="categoria" value="Deltha Nu" readonly/>
+              <input
+                type="text"
+                id="categoria"
+                name="categoria"
+                value="Deltha Nu"
+                readonly
+              />
             </div>
 
             <div class="form-group">
               <label for="folio">Folio:</label>
-              <input type="text" id="folio" name="folio" required placeholder="Número de folio" />
+              <input
+                type="text"
+                id="folio"
+                name="folio"
+                required
+                placeholder="Número de folio"
+              />
             </div>
 
             <div class="form-group">
               <label for="fotoAlumno">Foto del alumno:</label>
-              <input type="file" id="fotoAlumno" name="fotoAlumno" accept="image/*" required />
+              <input
+                type="file"
+                id="fotoAlumno"
+                name="fotoAlumno"
+                accept="image/*"
+                required
+              />
               <div class="preview-container" id="previewAlumno">
                 <img class="preview-img" id="imgAlumno" alt="Vista previa" />
               </div>
@@ -51,7 +77,21 @@
               <h4>Persona Autorizada #1</h4>
               <div class="form-group">
                 <label for="autorizado1">Nombre completo:</label>
-                <input type="text" id="autorizado1" name="autorizado1" placeholder="Nombre de la primera persona autorizada" />
+                <input
+                  type="text"
+                  id="autorizado1"
+                  name="autorizado1"
+                  placeholder="Nombre de la primera persona autorizada"
+                />
+              </div>
+              <div class="form-group">
+                <label for="parentesco1">Parentesco:</label>
+                <input
+                  type="text"
+                  id="parentesco1"
+                  name="parentesco1"
+                  placeholder="Ej: Padre, Madre, Tío(a), etc."
+                />
               </div>
               <div class="form-group">
                 <label for="foto1">Foto:</label>
@@ -66,7 +106,21 @@
               <h4>Persona Autorizada #2</h4>
               <div class="form-group">
                 <label for="autorizado2">Nombre completo:</label>
-                <input type="text" id="autorizado2" name="autorizado2" placeholder="Nombre de la segunda persona autorizada" />
+                <input
+                  type="text"
+                  id="autorizado2"
+                  name="autorizado2"
+                  placeholder="Nombre de la segunda persona autorizada"
+                />
+              </div>
+              <div class="form-group">
+                <label for="parentesco2">Parentesco:</label>
+                <input
+                  type="text"
+                  id="parentesco2"
+                  name="parentesco2"
+                  placeholder="Ej: Padre, Madre, Tío(a), etc."
+                />
               </div>
               <div class="form-group">
                 <label for="foto2">Foto:</label>
@@ -81,7 +135,21 @@
               <h4>Persona Autorizada #3</h4>
               <div class="form-group">
                 <label for="autorizado3">Nombre completo:</label>
-                <input type="text" id="autorizado3" name="autorizado3" placeholder="Nombre de la tercera persona autorizada" />
+                <input
+                  type="text"
+                  id="autorizado3"
+                  name="autorizado3"
+                  placeholder="Nombre de la tercera persona autorizada"
+                />
+              </div>
+              <div class="form-group">
+                <label for="parentesco3">Parentesco:</label>
+                <input
+                  type="text"
+                  id="parentesco3"
+                  name="parentesco3"
+                  placeholder="Ej: Padre, Madre, Tío(a), etc."
+                />
               </div>
               <div class="form-group">
                 <label for="foto3">Foto:</label>
@@ -93,13 +161,10 @@
             </div>
           </fieldset>
 
-          <button type="submit" class="submit-btn">
-            📄 Generar PDF
-          </button>
+          <button type="submit" class="submit-btn">📄 Generar PDF</button>
         </form>
       </div>
     </div>
-    <!-- Librería para generar PDF -->     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="/Recursos_JS/Generar_PDF.js"></script>
   </body>
